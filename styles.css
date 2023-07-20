@@ -1,0 +1,174 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 1em;
+  background: #2b2333 url("http://i.imgur.com/3tpMmXJ.jpg") no-repeat center
+    center fixed;
+  /* background: #2B2333 url("nether-portal.jpg") no-repeat center center fixed;*/
+  background-size: cover;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.darken {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  min-height: 100vh;
+}
+
+h1 {
+  letter-spacing: 1px;
+}
+
+.container {
+  width: 480px;
+  margin: auto;
+  padding: 15px;
+  text-shadow: 2px 2px 2px black;
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+input,
+button,
+.txt-area {
+  color: inherit;
+  display: block;
+  width: 100%;
+  padding: 5px;
+  outline: none;
+  border: 1px solid rgba(196, 196, 196, 0.5);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+input:disabled {
+  background-color: rgba(100, 100, 100, 0.75);
+  color: rgb(20, 20, 20);
+  cursor: not-allowed;
+}
+
+label {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+input,
+label {
+  height: 30px;
+}
+
+input:read-only,
+input:-moz-read-only {
+  background-color: rgba(242, 242, 242, 0.4);
+}
+
+input:focus {
+  border-color: #9141fe;
+  box-shadow: 0 0 5px #9141fe;
+}
+
+button {
+  background: #7c3ad6;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #5d2ba0;
+}
+
+button:active {
+  background: #3a1d62;
+  color: #d49752;
+}
+
+.txt-area {
+  resize: none;
+  height: 70px;
+}
+
+.note {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border: 1px solid rgba(212, 151, 82, 0.3);
+  color: #d49752;
+}
+
+.m10 {
+  margin: 10px 0;
+}
+
+/*  GRID  */
+.row {
+  display: block;
+  width: 100%;
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+.col {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 3%;
+}
+
+.col:first-child {
+  margin-left: 0;
+}
+
+/*  GRID OF FOUR  */
+.span_4_of_4 {
+  width: 100%;
+}
+
+.span_3_of_4 {
+  width: 74.25%;
+}
+
+.span_2_of_4 {
+  width: 48.5%;
+}
+
+.span_1_of_4 {
+  width: 22.75%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+
+  .span_1_of_4,
+  .span_2_of_4,
+  .span_3_of_4,
+  .span_4_of_4 {
+    width: 100%;
+  }
+}
+
+/*  ClearFix  */
+.cf:before,
+.cf:after .row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after .row:after {
+  clear: both;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- HTML Meta Tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="title" content="Minecraft Portal Calculator" />
+    <meta name="description" content="Minecraft Portal Calculator" />
+    <meta name="keywords" content="Minecraft Portal Calculator, DDDGamer, Denis Zholob" />
+    <meta name="author" content="Denis Zholob" />
+
+    <!-- Title/Icons -->
+    <title>Minecraft Portal Calculator</title>
+    <link rel="icon" href="https://minecraft.net/etc.clientlibs/minecraft/clientlibs/main/resources/favicon.ico" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-28080172-12"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-28080172-12");
+    </script>
+  </head>
+
+  <body onload="init()">
+    <div class="darken">
+      <div class="container">
+        <h1 class="text-center">Minecraft Portal Calculator</h1>
+        <hr />
+
+        <p class="note">*Note: the y coordinate (height) does not matter, but make sure your x and z are precise.</p>
+
+        <div class="row">
+          <div class="col span_2_of_4">
+            <h3 class="text-center">Overworld</h3>
+            <div class="row">
+              <div class="col span_1_of_4">
+                <label for="xIn">X In:</label>
+              </div>
+              <!-- END col -->
+              <div class="col span_3_of_4">
+                <input id="xIn" type="number" tabindex="1" />
+              </div>
+              <!-- END col -->
+            </div>
+            <!-- END row -->
+            <div class="row">
+              <div class="col span_1_of_4">
+                <label for="yIn">Y In:</label>
+              </div>
+              <!-- END col -->
+              <div class="col span_3_of_4">
+                <input id="yIn" type="number" tabindex="2" disabled />
+              </div>
+              <!-- END col -->
+            </div>
+            <!-- END row -->
+            <div class="row">
+              <div class="col span_1_of_4">
+                <label for="zIn">Z In:</label>
+              </div>
+              <!-- END col -->
+              <div class="col span_3_of_4">
+                <input id="zIn" type="number" tabindex="3" />
+              </div>
+              <!-- END col -->
+            </div>
+            <!-- END row -->
+          </div>
+          <!-- END col -->
+
+          <div class="col span_2_of_4">
+            <h3 class="text-center">The Nether</h3>
+            <div class="row">
+              <div class="col span_1_of_4">
+                <label for="xOut">X Out:</label>
+              </div>
+              <!-- END col -->
+              <div class="col span_3_of_4">
+                <input id="xOut" type="number" />
+              </div>
+              <!-- END col -->
+            </div>
+            <!-- END row -->
+            <div class="row">
+              <div class="col span_1_of_4">
+                <label for="yOut">Y Out:</label>
+              </div>
+              <!-- END col -->
+              <div class="col span_3_of_4">
+                <input id="yOut" type="number" disabled />
+              </div>
+              <!-- END col -->
+            </div>
+            <!-- END row -->
+            <div class="row">
+              <div class="col span_1_of_4">
+                <label for="zOut">Z Out:</label>
+              </div>
+              <!-- END col -->
+              <div class="col span_3_of_4">
+                <input id="zOut" type="number" />
+              </div>
+              <!-- END col -->
+            </div>
+            <!-- END row -->
+          </div>
+          <!-- END col -->
+        </div>
+        <!-- END row -->
+
+        <hr />
+        <div class="row">
+          <textarea id="Output" class="txt-area"></textarea>
+        </div>
+        <!-- END row -->
+        <div class="row">
+          <button onClick="clearFields()">Clear Fields</button>
+        </div>
+        <!-- END row -->
+
+        <div class="note m10">
+          <p>
+            To link portals from the overworld to the nether, they must be in correct locations as the Nether coordinate system is 1/8th the
+            one of the Overworld's.
+          </p>
+          <ul>
+            <li>Place the Overworld portal (10 blocks min).</li>
+            <li>Press F3 to find out the coordinates.</li>
+            <li>Travel to the Nether and build the nether portal on the coordinates obtained from the calculator.</li>
+          </ul>
+
+          <p>
+            Ref:
+            <a href="https://minecraft.fandom.com/wiki/Nether_Portal">Nether Portal Wiki</a>
+          </p>
+        </div>
+      </div>
+      <!-- END darken -->
+    </div>
+    <!-- END container -->
+
+    <script src="./scripts.js"></script>
+  </body>
+</html>
